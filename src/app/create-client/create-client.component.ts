@@ -16,6 +16,7 @@ export class CreateClientComponent implements OnInit {
   id: number;
   client: Client;
   clientForm: FormGroup;
+  clients: any;
   loading = false;
   submitted = false;
 
@@ -51,24 +52,51 @@ export class CreateClientComponent implements OnInit {
       return;
     } else {
       this.loading = true;
-      this.createUser();
+      // this.createUser();
+      this.checkDuplicates();
     }
   }
 
   createUser() {
     this.clientService.createClient(this.clientForm.value)
-        .pipe(first())
-        .subscribe({
-            next: () => {
-              this.toastr.success('Client added successfully!');
-              setTimeout(()=>{
-                this.router.navigate(['../'], { relativeTo: this.route });
-              }, 1000);
-            },
-            error: error => {
-              this.toastr.error('An error has occured. Please contact administrator');
-              this.loading = false;
-            }
-        });
+      .pipe(first())
+      .subscribe({
+          next: () => {
+            this.toastr.success('Client added successfully!');
+            setTimeout(()=>{
+              this.router.navigate(['../'], { relativeTo: this.route });
+            }, 1000);
+          },
+          error: error => {
+            this.toastr.error('An error has occured. Please contact administrator');
+            this.loading = false;
+          }
+      });
+  }
+
+  checkDuplicates() {
+    this.clientService.getClientsList().subscribe(data => {
+      this.clients = data as Client[];
+      
+      let duplicateFail = false;
+      let formClients = this.clientForm.value;
+      let counter  = 0;
+  
+      for (const iterator of this.clients) {
+        if (iterator.IDNumber === formClients.IDNumber) {
+          counter += 1;
+          this.toastr.error('This ID number already exists. Please change it.');
+          this.loading = false;
+          duplicateFail = true;
+        }
+        if (iterator.mobileNumber === formClients.mobileNumber) {
+          counter += 1;
+          this.toastr.error('This Mobile number already exists. Please change it.');
+          this.loading = false;
+          duplicateFail = true;
+        }
+      }
+      if (!duplicateFail)this.createUser();
+    }); 
   }
 }

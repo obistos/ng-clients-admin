@@ -16,6 +16,7 @@ export class EditClientComponent implements OnInit {
   id: number;
   client: Client;
   clientForm: FormGroup;
+  clients: any;
   loading = false;
   submitted = false;
 
@@ -65,7 +66,7 @@ export class EditClientComponent implements OnInit {
       return;
     } else {
       this.loading = true;
-      this.updateUser();
+      this.checkDuplicates();
     }
   }
 
@@ -84,5 +85,31 @@ export class EditClientComponent implements OnInit {
           this.loading = false;
         }
     });
+  }
+  
+  checkDuplicates() {
+    this.clientService.getClientsList().subscribe(data => {
+      this.clients = data as Client[];
+      
+      let duplicateFail = false;
+      let formClients = this.clientForm.value;
+      let counter  = 0;
+  
+      for (const iterator of this.clients) {
+        if (iterator.IDNumber === formClients.IDNumber && iterator.id.toString() !== this.id) {
+          counter += 1;
+          this.toastr.error('This ID number already exists. Please change it.');
+          this.loading = false;
+          duplicateFail = true;
+        }
+        if (iterator.mobileNumber === formClients.mobileNumber && iterator.id.toString() !== this.id) {
+          counter += 1;
+          this.toastr.error('This Mobile number already exists. Please change it.');
+          this.loading = false;
+          duplicateFail = true;
+        }
+      }
+      if (!duplicateFail)this.updateUser();
+    }); 
   }
 }

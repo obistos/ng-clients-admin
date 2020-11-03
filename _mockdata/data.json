@@ -1,14 +1,6 @@
 {
   "clients": [
     {
-      "firstName": "Hillel",
-      "lastName": "Kunat",
-      "mobileNumber": "0821234567",
-      "IDNumber": "8501015464808",
-      "physicalAddress": "68 Coolidge Lane",
-      "id": 2
-    },
-    {
       "firstName": "Martainn",
       "lastName": "Wheelwright",
       "mobileNumber": "0185845225",

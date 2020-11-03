@@ -10,7 +10,7 @@ import { ClientService } from '../services/client.service';
 @Component({
   selector: 'app-create-client',
   templateUrl: './create-client.component.html',
-  styleUrls: ['./create-client.component.css']
+  styleUrls: ['./create-client.component.scss']
 })
 export class CreateClientComponent implements OnInit {
   id: number;

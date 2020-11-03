@@ -36,4 +36,18 @@ describe('CreateClientComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should test form validity', () => {
+    const form = component.clientForm;
+    expect(form.valid).toBeFalsy();
+
+    const formControls = form.controls;
+    formControls.firstName.setValue('John');
+    formControls.lastName.setValue('Doe');
+    formControls.mobileNumber.setValue('0813456789');
+    formControls.IDNumber.setValue('8791234567890');
+    formControls.physicalAddress.setValue('10 Springbok Street');
+
+    expect(form.valid).toBeTruthy();
+  });
 });

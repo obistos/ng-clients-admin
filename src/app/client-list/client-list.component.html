@@ -1,0 +1,49 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Client List</h2>
+      </div>
+      <div class="col-md-6">
+        <div class="search form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="searchInput"
+            placeholder="Type to search..."
+            [(ngModel)]="searchInput"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Mobile Number</th>
+          <th>ID Number</th>
+          <th>Physical Address</th>
+          <th class="actions">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients | async | clientfilter:searchInput">
+          <td>{{client.firstName}}</td>
+          <td>{{client.lastName}}</td>
+          <td>{{client.mobileNumber}}</td>
+          <td>{{client.IDNumber}}</td>
+          <td>{{client.physicalAddress}}</td>
+          <td class="actions">
+            <button (click)="clientDetails(client.id)" class="btn btn-success">View</button>
+            <button (click)="editDetails(client.id)" class="btn btn-info">Edit</button>
+            <button (click)="deleteClient(client.id)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

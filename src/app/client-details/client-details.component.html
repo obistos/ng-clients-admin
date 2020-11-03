@@ -1,0 +1,26 @@
+<h2>Client Details</h2> 
+
+<hr/>
+<div *ngIf="client">
+  <div>
+    <label><b>First Name: </b></label> {{client.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{client.lastName}}
+  </div>
+  <div>
+    <label><b>Mobile Number: </b></label> {{client.mobileNumber}}
+  </div>  
+  <div>
+    <label><b>ID Number: </b></label> {{client.IDNumber}}
+  </div>  
+  <div>
+    <label><b>Physical Address: </b></label> {{client.physicalAddress}}
+  </div>  
+</div>
+
+<br>
+<br>
+<a routerLink="/clients" class="btn btn-primary">Back</a><br>
+
+

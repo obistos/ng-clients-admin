@@ -1,0 +1,156 @@
+{
+  "clients": [
+    {
+      "firstName": "Hillel",
+      "lastName": "Kunat",
+      "mobileNumber": "0821234567",
+      "IDNumber": "8501015464812",
+      "physicalAddress": "68 Coolidge Lane",
+      "id": 2
+    },
+    {
+      "firstName": "Martainn",
+      "lastName": "Wheelwright",
+      "mobileNumber": "0185845223",
+      "IDNumber": "8501015464809",
+      "physicalAddress": "38 Cordelia Avenue",
+      "id": 4
+    },
+    {
+      "firstName": "Helaine",
+      "lastName": "Luca",
+      "mobileNumber": "0047545720",
+      "IDNumber": "8501015464813",
+      "physicalAddress": "68 Rusk Crossing",
+      "id": 5
+    },
+    {
+      "firstName": "Warner",
+      "lastName": "Barnby",
+      "mobileNumber": "0813456789",
+      "IDNumber": "8501015464812",
+      "physicalAddress": "1 Maryland Crossing",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "firstName": "Philippine",
+      "lastName": "Chatelain",
+      "mobileNumber": "3899942353",
+      "IDNumber": "85010154648108",
+      "physicalAddress": "29624 Huxley Drive"
+    },
+    {
+      "id": 9,
+      "firstName": "Konstantine",
+      "lastName": "Degan",
+      "mobileNumber": "3813108813",
+      "IDNumber": "85010154648146",
+      "physicalAddress": "02 Bobwhite Alley"
+    },
+    {
+      "firstName": "Dedra",
+      "lastName": "St Quenin",
+      "mobileNumber": "4656193267",
+      "IDNumber": "8501015464811",
+      "physicalAddress": "68 Fair Oaks Hill",
+      "id": 11
+    },
+    {
+      "firstName": "Ardelia",
+      "lastName": "Patnelli",
+      "mobileNumber": "0834567890",
+      "IDNumber": "8501015464810",
+      "physicalAddress": "8 Gale Trail",
+      "id": 12
+    },
+    {
+      "id": 14,
+      "firstName": "Ginny",
+      "lastName": "Screase",
+      "mobileNumber": "5233675625",
+      "IDNumber": "85010154648115",
+      "physicalAddress": "7 Sheridan Court"
+    },
+    {
+      "id": 15,
+      "firstName": "Herman",
+      "lastName": "Mollon",
+      "mobileNumber": "9399633543",
+      "IDNumber": "85010154648099",
+      "physicalAddress": "4731 Village Road"
+    },
+    {
+      "id": 16,
+      "firstName": "Ermanno",
+      "lastName": "Bellhouse",
+      "mobileNumber": "6682063849",
+      "IDNumber": "85010154648098",
+      "physicalAddress": "24323 Mendota Lane"
+    },
+    {
+      "firstName": "Engelbert",
+      "lastName": "Emmerson",
+      "mobileNumber": "0844567892",
+      "IDNumber": "8501015464811",
+      "physicalAddress": "22 Oxford Crossing",
+      "id": 17
+    },
+    {
+      "firstName": "Davida",
+      "lastName": "Littlepage",
+      "mobileNumber": "0832345678",
+      "IDNumber": "8501015464812",
+      "physicalAddress": "92 Toban Alley",
+      "id": 18
+    },
+    {
+      "firstName": "Gregg",
+      "lastName": "Bandey",
+      "mobileNumber": "7384322367",
+      "IDNumber": "8501015464810",
+      "physicalAddress": "692 Thompson Pass",
+      "id": 19
+    },
+    {
+      "firstName": "Leonelle",
+      "lastName": "Scafe",
+      "mobileNumber": "0733456789",
+      "IDNumber": "8501015464813",
+      "physicalAddress": "66 Grim Court",
+      "id": 20
+    },
+    {
+      "firstName": "Jack",
+      "lastName": "Jones",
+      "mobileNumber": "0813456789",
+      "IDNumber": "8765434567542",
+      "physicalAddress": "16 Alburry road",
+      "id": 21
+    },
+    {
+      "firstName": "Jill",
+      "lastName": "Thompson",
+      "mobileNumber": "0711234567",
+      "IDNumber": "8765432123456",
+      "physicalAddress": "18 Marbury road",
+      "id": 22
+    },
+    {
+      "firstName": "Salome",
+      "lastName": "Jackson",
+      "mobileNumber": "0721234567",
+      "IDNumber": "9845678765435",
+      "physicalAddress": "19 Ericson Street",
+      "id": 23
+    },
+    {
+      "firstName": "Samson",
+      "lastName": "Lux",
+      "mobileNumber": "0833456789",
+      "IDNumber": "7834567765433",
+      "physicalAddress": "8 Alexandra Road",
+      "id": 24
+    }
+  ]
+}
